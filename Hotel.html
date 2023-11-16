@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-    <title>BanzhafHotels.com</title>
+    <head><title>BanzhafHotels.com</title></head>
+    
     <body>
 
         <style>
@@ -18,10 +19,23 @@
             var hotel ={
                 name: "Banzhaf Hotels",
                 totalRooms: 1557,
-                bookedRooms: 235
+                bookedRooms: 0
             }
 
-            $("body").append("<p>Total Rooms: " + hotel.totalRooms + "</p>")
+            $("body").append("<p id='roomTotal'>Total Rooms: " + hotel.totalRooms + "</p>")
+            
+            setInterval(function () {
+                $("#roomTotal").text("Total Rooms: " + hotel.totalRooms)
+                hotel.totalRooms++
+            }, 1)
+
+            $("body").append("<p id='bookedRooms'>Booked Rooms: " + hotel.bookedRooms + "</p>")
+
+            setInterval(function () {
+                $("#bookedRooms").text("Booked Rooms: " + hotel.bookedRooms)
+                hotel.bookedRooms++
+            }, 1)
+
 
         </script>
     </body>
