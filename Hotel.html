@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head><title>BanzhafHotels.com</title></head>
-    
     <body>
-
-        <style>
-
-            
-
-        </style>
-
         <h1>Welcome to Banzhaf Hotels</h1>
         <h2>We hope you enjoy your stay</h2>
+        <img src = "https://www.cvent.com/sites/default/files/image/2021-03/Aerial%20view%20of%20Burj%20Al%20Arab%20luxury%20hotel%20in%20Dubai.jpg" width="1254" height="837">
 
         <script src = "https://code.jquery.com/jquery-3.7.1.js"></script>
         <script>
 
-            var avaliableRooms = Math.floor(Math.random * 10000000000000000)
             var hotel ={
                 name: "Banzhaf Hotels",
                 totalRooms: 1557,
-                bookedRooms: 0
+                bookedRooms: 0,
+                avaliableRooms: 100
             }
 
             $("body").append("<p id='roomTotal'>Total Rooms: " + hotel.totalRooms + "</p>")
@@ -37,10 +30,7 @@
                 hotel.bookedRooms++
             }, 1)
 
-            $("body").append("<p>" + avaliableRooms + "</p>")
-
-
-
+            $("body").append("<p>" + hotel.avaliableRooms + "</p>")
         </script>
     </body>
 </html>
