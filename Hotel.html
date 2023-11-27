@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
+
+    <style>
+    body {
+    background-image: url('https://www.cvent.com/sites/default/files/image/2021-03/Aerial%20view%20of%20Burj%20Al%20Arab%20luxury%20hotel%20in%20Dubai.jpg');
+    background-repeat: no-repeat;
+    color: orange 
+    }
+    </style>
     <head><title>BanzhafHotels.com</title></head>
     <body>
         <h1>Welcome to Banzhaf Hotels</h1>
         <h2>We hope you enjoy your stay</h2>
-        <img src = "https://www.cvent.com/sites/default/files/image/2021-03/Aerial%20view%20of%20Burj%20Al%20Arab%20luxury%20hotel%20in%20Dubai.jpg" width="1254" height="837">
 
         <script src = "https://code.jquery.com/jquery-3.7.1.js"></script>
         <script>
@@ -13,7 +20,8 @@
                 name: "Banzhaf Hotels",
                 totalRooms: 1557,
                 bookedRooms: 0,
-                avaliableRooms: "Check Website Later"
+                avaliableRooms: "Error, please check back later",
+                price: Math.floor(Math.random() * 4)
             }
 
             $("body").append("<p id='roomTotal'>Total Rooms: " + hotel.totalRooms + "</p>")
@@ -31,6 +39,7 @@
             }, 1)
 
             $("body").append("<p> Avaliable Rooms: " + hotel.avaliableRooms + "</p>")
+            $("body").append("<p Current Price for a room: " + hotel.price + "</p>")
         </script>
     </body>
 </html>
