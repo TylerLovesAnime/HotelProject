@@ -13,7 +13,7 @@
                 name: "Banzhaf Hotels",
                 totalRooms: 1557,
                 bookedRooms: 0,
-                avaliableRooms: 100
+                avaliableRooms: "Check Website Later"
             }
 
             $("body").append("<p id='roomTotal'>Total Rooms: " + hotel.totalRooms + "</p>")
@@ -30,7 +30,7 @@
                 hotel.bookedRooms++
             }, 1)
 
-            $("body").append("<p>" + hotel.avaliableRooms + "</p>")
+            $("body").append("<p> Avaliable Rooms: " + hotel.avaliableRooms + "</p>")
         </script>
     </body>
 </html>
