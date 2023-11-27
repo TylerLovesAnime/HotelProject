@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 
-    <style>
+    <a href="https://www.booking.com/">
+        <button>Book Now!</button>
+    </a>
+
+    <style>    
     body {
     background-image: url('https://www.cvent.com/sites/default/files/image/2021-03/Aerial%20view%20of%20Burj%20Al%20Arab%20luxury%20hotel%20in%20Dubai.jpg');
     background-repeat: no-repeat;
@@ -12,34 +16,42 @@
     <body>
         <h1>Welcome to Banzhaf Hotels</h1>
         <h2>We hope you enjoy your stay</h2>
+        <h3>Current hotel stats: </h3>
 
         <script src = "https://code.jquery.com/jquery-3.7.1.js"></script>
         <script>
 
-            var hotel ={
+            var hotel = {
                 name: "Banzhaf Hotels",
                 totalRooms: 1557,
-                bookedRooms: 0,
-                avaliableRooms: "Error, please check back later",
-                price: Math.floor(Math.random() * 4)
+                bookedRooms: 657,
+                avaliableRooms: 900,
+                price: Math.floor(Math.random() * 100000000)
             }
 
             $("body").append("<p id='roomTotal'>Total Rooms: " + hotel.totalRooms + "</p>")
             
             setInterval(function () {
-                $("#roomTotal").text("Total Rooms: " + hotel.totalRooms)
+                $("#roomTotal").text("Total rooms: " + hotel.totalRooms)
                 hotel.totalRooms++
             }, 1)
 
-            $("body").append("<p id='bookedRooms'>Booked Rooms: " + hotel.bookedRooms + "</p>")
+            $("body").append("<p id='bookedRooms'>Booked rooms: " + hotel.bookedRooms + "</p>")
 
             setInterval(function () {
-                $("#bookedRooms").text("Booked Rooms: " + hotel.bookedRooms)
+                $("#bookedRooms").text("Booked rooms: " + hotel.bookedRooms)
                 hotel.bookedRooms++
             }, 1)
 
-            $("body").append("<p> Avaliable Rooms: " + hotel.avaliableRooms + "</p>")
-            $("body").append("<p> Current Price for a room: " + hotel.price + "</p>")
+            $("body").append("<p id='avaliableRooms'>Avaliable rooms: " + hotel.avaliableRooms + "</p>")
+
+            setInterval(function () {
+                $("#avaliableRooms").text("Avaliable rooms: " + hotel.avaliableRooms)
+                hotel.avaliableRooms++
+            }, 1)
+
+           
+            $("body").append("<p> Current price for a room (At a secondly rate): " + "$" + hotel.price + "</p>")
         </script>
     </body>
 </html>
