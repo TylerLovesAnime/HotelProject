@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
 
-    <a href="https://www.booking.com/">
-        <button>Book Now!</button>
-    </a>
+    
 
     <style>    
     body {
-    border: 2px solid black;
-    padding: 25px;
-    background: url('https://www.cvent.com/sites/default/files/image/2021-03/Aerial%20view%20of%20Burj%20Al%20Arab%20luxury%20hotel%20in%20Dubai.jpg');
+    background: url('https://i.redd.it/dr5cbbya3md01.jpg');
     background-repeat: no-repeat;
-    background-size: 100px 300px
-    color=orange 
+    background-size: 1920px 1080px;
+    color: #191970
     }
     </style>
+
+    
+
     <head><title>BanzhafHotels.com</title></head>
     <body>
         <h1>Welcome to Banzhaf Hotels</h1>
@@ -23,39 +22,57 @@
 
         <script src = "https://code.jquery.com/jquery-3.7.1.js"></script>
         <script>
-
+            var count = 0
             var hotel = {
                 name: "Banzhaf Hotels",
-                totalRooms: 1557,
+                totalRooms: 100000000000,
                 bookedRooms: 657,
-                avaliableRooms: 900,
-                price: Math.floor(Math.random() * 100000000)
+                avaliableRooms: 1557,
+                price: Math.floor(Math.random() * 100000000),
+                defenestrationRates: 1
             }
 
             $("body").append("<p id='roomTotal'>Total Rooms: " + hotel.totalRooms + "</p>")
             
             setInterval(function () {
                 $("#roomTotal").text("Total rooms: " + hotel.totalRooms)
-                hotel.totalRooms++
-            }, 1)
+                hotel.totalRooms--
+            }, 100)
 
             $("body").append("<p id='bookedRooms'>Booked rooms: " + hotel.bookedRooms + "</p>")
 
             setInterval(function () {
                 $("#bookedRooms").text("Booked rooms: " + hotel.bookedRooms)
                 hotel.bookedRooms++
-            }, 1)
+            }, 100)
 
             $("body").append("<p id='avaliableRooms'>Avaliable rooms: " + hotel.avaliableRooms + "</p>")
 
             setInterval(function () {
                 $("#avaliableRooms").text("Avaliable rooms: " + hotel.avaliableRooms)
-                hotel.avaliableRooms++
+                hotel.avaliableRooms--
+            }, 100)
+
+            $("body").append("<p id='defenestrationRates'>Defenestration rates: " + hotel.defenestrationRates + "</p>")
+
+            setInterval(function () {
+                $("#defenestrationRates").text("Defenestration rates: " + hotel.defenestrationRates)
+                hotel.defenestrationRates += count
+                count++
             }, 1)
 
-           
             $("body").append("<p> Current price for a room (At a secondly rate): " + "$" + hotel.price + "</p>")
         </script>
+
+    <form>
+        Enter in your IP address and social security number for 10% off you next tripp!: <br>
+        <textarea rows="1" cols="25" name="IPAddress" spellcheck="false">
+        </textarea>
+    </form>
+
+    <a href="https://www.booking.com/">
+        <button>Book Now!</button>
+    </a>
+
     </body>
 </html>
-
